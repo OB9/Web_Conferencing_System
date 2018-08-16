@@ -71,17 +71,10 @@
     <button id="btn">start</button>
     <!-- 入力エリア -->
     <div>
-      room
-      <input type="text" id="room">
-      <button id="room_enter">Enter</button>
-    </div>
-    <div>
-      name
       <input type="text" id="username">
     </div>
     <div>
-      text
-      <textarea id="text" rows="1"></textarea>
+      <textarea id="text" rows="5"></textarea>
       <button id="send">send</button>
     </div>
 
@@ -116,7 +109,7 @@
     const text = document.getElementById("text");
     const output = document.getElementById("output")
 
-    Msg送信処理
+    // Msg送信処理
     send.addEventListener('click', function () {
       newPostRef.ref(room).push({
         username: username.value,
